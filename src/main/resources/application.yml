@@ -1,0 +1,78 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: aiops-agent
+
+  ai:
+    # DeepSeek Chat Model
+    deepseek:
+      api-key: sk-8c51dfea06a142da98ae879bccf7900a
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 0.3
+
+    # Qdrant Vector Store
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6333
+        collection-name: aiops_knowledge
+        embedding-dimension: 1024
+        initialize-schema: true
+
+    # Ollama Embedding
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        model: bge-m3
+
+  # MySQL
+  datasource:
+    url: jdbc:mysql://localhost:3306/aiops?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+
+  # Actuator
+  boot:
+    admin:
+      client:
+        enabled: false
+
+# Actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Prometheus HTTP API
+prometheus:
+  url: http://localhost:9090
+
+# RAG parameters
+rag:
+  top-k: 5
+  similarity-threshold: 0.5
+
+# Session parameters
+session:
+  max-history: 20
+
+logging:
+  level:
+    com.aiops: DEBUG
+    org.springframework.ai: INFO
