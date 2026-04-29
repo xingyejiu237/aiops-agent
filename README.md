@@ -46,6 +46,8 @@ http://localhost:8080
 - [Phase 1 详细设计](./docs/项目计划Phase1.md)
 - [Phase 1 总结](./docs/总结Phase1.md)
 
-## License
+## 版权声明
 
-MIT
+版权所有 © 2025 xingyejiu237. 保留所有权利。
+
+未经作者明确书面许可，任何人不得使用、复制、修改或分发本软件。
