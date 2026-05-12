@@ -1,0 +1,74 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Runtime
+*.pid
+*.heap
+*.hprof
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+build/
+
+# Generated
+generated-images/
+
+# IDE config
+.factorypath
+*.springBeans
+
+# API Keys & Secrets（application.yml 里的 api-key 要手动清理）
+application.yml
+!src/main/resources/application-example.yml
+
+# Boot logs
+boot.log
+boot-err.log
+
+#知识笔记
+知识笔记/
+
+# Maven wrapper
+.mvn/
